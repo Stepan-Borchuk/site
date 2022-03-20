@@ -1,0 +1,9 @@
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    @include text(700, 28px, 1.18);
+    @media screen and (min-width: 1200px) {
+      @include text(700, 36px, 1.16);
+      margin-bottom: 50px;
+    }
+  }

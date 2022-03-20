@@ -1,0 +1,77 @@
+.contact-item__button {
+  @include button($col:var(--second-text-color), $bg:transparent);
+  @include text(500, 14px, 1.14, 0.02em);
+  display: flex;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover{
+      color: var(--hover-text-color);
+    }
+  }
+  
+  .contact-item:not(:last-child) {
+    @media screen and (min-width: 768px) {
+     margin-bottom: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
+  
+ 
+
+  .footer-form__submit {
+    @include button();
+    @include flex();
+    @include text(700, 16px, 1.87, 0.06em);
+    width: 200px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    
+    padding: 10px 29px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 12px;
+    }
+  }
+
+
+  .hero__button {
+    @include button();
+    @include flex();
+    @include text(700, 16px, 1.87, 0.06em);
+    padding: 10px 32px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+  }
+
+  .filter-button {
+    @include button($col:var(--main-text-color), $bg:var(--btn-bkground-v2));
+    @include flex();
+    @include text(500, 16px, 1.62);
+    padding: 6px 22px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+      color: var(--hero-text-color);
+      background-color: var(--btn-bkground-v1);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
+
+  .modal__submit {
+    @include button();
+    @include flex();
+    @include text(700, 16px, 1.87, 0.06em);
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    margin-top: 30px;
+    &:focus {
+      background: #188CE8;
+    }
+   }
+
+ 
